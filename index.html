@@ -1,0 +1,50 @@
+                         <!--Developed by: Charinda Moyer and Tanner Hainsworth-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candy Crush</title>
+    <link rel="stylesheet" href="candy.css">
+    <script src="candy.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+</head>
+
+<body>
+
+    <h1 id="gameTitle">Candy Crush</h1>
+    <h2>Score: <span id="score">0</span></h2>
+    <!--creating "play music" and "stop music" buttons-->
+    <button class="play-music">Play music</button>
+    <button class="stop-music">Stop music</button>
+
+    <div id="board"></div>
+
+    <script type="text/javascript">
+        var music = {
+            overworld: new Howl({
+                src: ["music/candy-crush-music.mp3"],
+                volume: 1.0,
+                loop: true
+            })
+        }
+        // click play music button to start the music
+        document.querySelector(".play-music").addEventListener("click", () => {
+            //check if the music is already playing
+            if (!music.overworld.playing()) { // if the musis's not playing,
+                music.overworld.play(); //then starts the music
+            }
+        })
+        // click stop music button to stopt the music
+        document.querySelector(".stop-music").addEventListener("click", () => {
+            music.overworld.stop(); // stops music
+        })
+    </script>
+
+</body>
+</html>
+
+
+<!--JavaScript Game with Howler JS with playing/stoping buttons Tutorial from https://www.youtube.com/watch?v=hn7MhPt24L4 -->
+<!--Background music from https://downloads.khinsider.com/game-soundtracks/album/candy-crush-saga-gamerip -->
+<!--Background image from <a href="https://www.freepik.com/vectors/cartoon-forest"> Cartoon forest vector created by brgfx - www.freepik.com</a> -->

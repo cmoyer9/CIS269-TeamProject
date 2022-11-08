@@ -1,0 +1,48 @@
+                      /* Developed by: Charinda Moyer and Tanner Hainsworth*/
+body {
+    background: url("./landscape2.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif,;
+    color: #b200ff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#board {
+    width: 450px;
+    height: 450px;
+    position: relative;
+    background-color: antiquewhite;
+    border: 5px solid darkcyan;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#board img {
+    width: 50px;
+    height: 50px;
+}
+.play-music, .stop-music {
+    display: inline-block;
+    padding: 3px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #c590e9;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 5px #999;
+}
+
+    /* color change to blue when mouse-over buttons*/
+.play-music:hover, .stop-music:hover {
+     background-color: #be00ff
+}
+   
